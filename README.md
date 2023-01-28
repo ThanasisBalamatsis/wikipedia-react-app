@@ -1,3 +1,7 @@
+# App Overview
+Work in progress...
+React application that makes use of Wikipedia API in order to collect results corresponding to the user's search term.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
