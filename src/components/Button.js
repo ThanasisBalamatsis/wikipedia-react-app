@@ -6,7 +6,7 @@ export default function Button({
     close,
     ...rest
 }) {
-    const classes = classnames("flex items-center px-3 py-1.5 border",{
+    const classes = classnames("flex items-center px-3 py-1.5 border h-9 m-1 font-thin",{
         "border-blue-500 bg-blue-500 text-white rounded" : submit,
         "border-red-400 bg-red-500" : close
     });

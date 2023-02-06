@@ -3,7 +3,7 @@ import classnames from "classnames";
 export default function Panel({children, className, ...rest}) {
 
     const classes = classnames(
-        "border rounded p-3 shadow bg-white w-full", 
+        "grid place-items-center border rounded p-3 shadow bg-gray-100 w-full", 
         className
     );
 
