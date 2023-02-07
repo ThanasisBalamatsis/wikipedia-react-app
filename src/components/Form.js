@@ -27,7 +27,7 @@ export default function Form({children, className, title, search, ...rest}) {
 
     return (
         <Panel {...rest}>
-            <label className="font-thin text-2xl">{title}</label>
+            <label className="font-thin text-2xl mb-1">{title}</label>
             <form className={classes} onSubmit={handleSubmit}>
                 <label className="text-lg m-1 font-thin">{children}</label>
                 <input className="font-thin font-style: italic text-lg h-9 m-5" value={term} onChange={handleChange}/>
