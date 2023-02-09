@@ -3,10 +3,10 @@ import classnames from "classnames";
 export default function Panel({children, searchPanel, termPanel, ...rest}) {
 
     const classes = classnames(
-        "place-items-center border rounded p-3 shadow bg-gray-100", 
+        "place-items-center border rounded p-3 shadow ", 
         {
-            "w-full grid": searchPanel,
-            "w-5/6 m-6 h-64 place-self-center text-center": termPanel
+            "w-full grid bg-stone-800": searchPanel,
+            "w-5/6 m-6 h-64 place-self-center text-center bg-stone-100": termPanel
         }
     );
 
