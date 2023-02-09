@@ -11,7 +11,7 @@ export default function TermsPage() {
     });
 
     return (
-        <div className='grid grid-cols-4 place-content-center'>
+        <div className='grid grid-cols-4'>
             {renderedTerms}
         </div>
     );
