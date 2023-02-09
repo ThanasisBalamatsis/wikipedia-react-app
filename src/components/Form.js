@@ -28,7 +28,7 @@ export default function Form({
     });
 
     return (
-        <Panel {...rest}>
+        <Panel searchPanel {...rest}>
             <label className="font-thin text-2xl mb-1">{title}</label>
             <form className={classes} onSubmit={handleSubmit}>
                 <label className="text-lg m-1 font-thin">{children}</label>
