@@ -6,16 +6,17 @@ import searchTerm from "../wikipedia-api";
 export default function Form({
     children,
     term,
-    setTerm, 
+    setTerm,
+    setFoundTerms, 
     title, 
     search, 
     ...rest
 }) {
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
-        const result = searchTerm(term);
+        const result = await searchTerm(term);
+        setFoundTerms(result);
         console.log(result);
-        console.log(term);
     }
 
     const handleChange = (event) => {

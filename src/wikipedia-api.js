@@ -10,6 +10,5 @@ export default async function searchTerm(term) {
             srsearch: term
         }
     });
-
     return result.data.query.search;
 }
