@@ -5,24 +5,21 @@ import searchTerm from "../wikipedia-api";
 
 export default function Form({
     children,
-    currentValue,
-    setCurrentValue, 
+    term,
+    setTerm, 
     title, 
     search, 
     ...rest
 }) {
     const handleSubmit = (event) => {
         event.preventDefault();
-        setCurrentValue(currentValue);
+        const result = searchTerm(term);
+        console.log(result);
+        console.log(term);
     }
 
     const handleChange = (event) => {
-        setCurrentValue(event.target.value);
-    };
-
-    const handleClick = () => {
-        const result = searchTerm(currentValue);
-        console.log(result);
+        setTerm(event.target.value);
     };
 
     const classes = classnames("items-center", {
@@ -34,8 +31,8 @@ export default function Form({
             <label className="font-thin text-2xl mb-1">{title}</label>
             <form className={classes} onSubmit={handleSubmit}>
                 <label className="text-lg m-1 font-thin">{children}</label>
-                <input className="font-thin font-style: italic text-lg h-9 m-5" value={currentValue} onChange={handleChange}/>
-                <Button submit onClick={handleClick}>Submit</Button>
+                <input className="font-thin font-style: italic text-lg h-9 m-5" value={term} onChange={handleChange}/>
+                <Button submit>Submit</Button>
             </form>
         </Panel>
         

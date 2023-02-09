@@ -2,14 +2,14 @@ import Form from "../components/Form";
 import useTermsContext from "../hooks/useTermsContext";
 
 export default function SearchPage() {
-    const {foundTerms, setFoundTerms} = useTermsContext();
+    const {term, setTerm, foundTerms, setFoundTerms} = useTermsContext();
 
     return (
         <Form 
             search 
             title="Wikipedia Inventory"
-            currentValue = {foundTerms}
-            setCurrentValue = {setFoundTerms}
+            term = {term}
+            setTerm = {setTerm}
         >
             Search for... 
         </Form>

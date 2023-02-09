@@ -3,14 +3,17 @@ import { createContext, useState } from "react";
 const TermsContext = createContext();
 
 function Provider({children}) {
-    const [savedTerms, setSavedTerms] = useState([]);
+    const [term, setTerm] = useState("");
     const [foundTerms, setFoundTerms] = useState([]);
+    const [savedTerms, setSavedTerms] = useState([]);
 
     const shared = {
-        savedTerms,
+        term,
         foundTerms,
-        setSavedTerms,
-        setFoundTerms
+        savedTerms,
+        setTerm,
+        setFoundTerms,
+        setSavedTerms
     };
 
     return (
