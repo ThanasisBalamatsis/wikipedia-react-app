@@ -1,6 +1,6 @@
 import classnames from "classnames";
 
-export default function Panel({children, searchPanel, termPanel, ...rest}) {
+export default function Panel({children, searchPanel, termPanel, term, ...rest}) {
 
     const classes = classnames(
         "place-items-center border rounded p-3 shadow ", 
@@ -10,5 +10,17 @@ export default function Panel({children, searchPanel, termPanel, ...rest}) {
         }
     );
 
-    return (<div {...rest} className={classes}>{children}</div>);
+    const content = (termPanel) ? <div>
+                                    <div className="font-thin text-xl mb-2">{children}</div>
+                                    <div  className="flex justify-center">
+                                        <div className="w-5/6 h-40 bg-stone-50 rounded font-thin text-sm">{term.snippet}</div>
+                                    </div>
+                                  </div> 
+                                  : children;
+
+    return (
+        <div {...rest} className={classes}>
+            {content}
+        </div>
+    );
 }

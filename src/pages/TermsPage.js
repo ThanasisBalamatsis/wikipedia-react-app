@@ -6,7 +6,13 @@ export default function TermsPage() {
 
     const renderedTerms = foundTerms.map((term) => {
         return (
-            <Panel termPanel key={term.pageid}>{term.title}</Panel>
+            <Panel 
+                termPanel 
+                key={term.pageid}
+                term={term}
+            >
+                {term.title}
+            </Panel>
         );
     });
 
