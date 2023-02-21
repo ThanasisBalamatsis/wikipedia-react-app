@@ -10,10 +10,11 @@ export default function Panel({children, searchPanel, termPanel, term, ...rest})
         }
     );
 
+
     const content = (termPanel) ? <div>
                                     <div className="font-thin text-xl mb-2">{children}</div>
                                     <div  className="flex justify-center">
-                                        <div className="w-5/6 h-40 bg-stone-50 rounded font-thin text-sm">{term.snippet}</div>
+                                        <div className="w-5/6 h-40 bg-stone-50 rounded font-thin text-sm">{term.snippet.replace(/<[^>]+>/g, '')}</div>
                                     </div>
                                   </div> 
                                   : children;

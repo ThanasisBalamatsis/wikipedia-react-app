@@ -9,6 +9,14 @@ export default async function searchTerm(term) {
             format: 'json',
             srsearch: term
         }
+        // params: {
+        //     action: "parse",
+        //     format: "json",
+        //     page: term,
+        //     prop: "wikitext",
+        //     formatversion: "2",
+        //     origin: "*"
+        // }
     });
     return result.data.query.search;
 }
