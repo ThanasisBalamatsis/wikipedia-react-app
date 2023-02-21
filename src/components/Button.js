@@ -4,11 +4,13 @@ export default function Button({
     children,
     submit,
     close,
+    open,
     ...rest
 }) {
     const classes = classnames("flex items-center px-3 py-1.5 border h-9 m-1 font-thin",{
         "border-sky-600 bg-sky-600 text-white rounded" : submit,
-        "border-red-400 bg-red-500" : close
+        "border-red-400 bg-red-500" : close,
+        "border-bg-stone-800 bg-stone-800 text-white rounded" : open
     });
 
     return (
@@ -19,8 +21,8 @@ export default function Button({
 }
 
 Button.propTypes = {
-    checkVariationValue: ({submit, close}) => {
-        const count = Number(!!submit) + Number(!!close);
+    checkVariationValue: ({submit, close, open}) => {
+        const count = Number(!!submit) + Number(!!close) + Number(!!open);
 
         if (count > 1) 
             return new Error("Button can have only either submit or close property");
