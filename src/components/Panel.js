@@ -18,7 +18,7 @@ export default function Panel({children, searchPanel, termPanel, term, ...rest})
                                     <div  className="flex justify-center">
                                         <div className="w-5/6 h-24 rounded font-thin text-sm">{term.snippet.replace(/<[^>]+>/g, '')}</div>
                                     </div>
-                                    <Button open><FiBookOpen/></Button>
+                                    <Button read><FiBookOpen/></Button>
                                   </div> 
                                   : children;
 
