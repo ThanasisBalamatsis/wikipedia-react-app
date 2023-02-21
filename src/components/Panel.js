@@ -1,5 +1,6 @@
 import classnames from "classnames";
 import Button from "./Button";
+import {FiBookOpen} from "react-icons/fi"; 
 
 export default function Panel({children, searchPanel, termPanel, term, ...rest}) {
 
@@ -17,7 +18,7 @@ export default function Panel({children, searchPanel, termPanel, term, ...rest})
                                     <div  className="flex justify-center">
                                         <div className="w-5/6 h-24 rounded font-thin text-sm">{term.snippet.replace(/<[^>]+>/g, '')}</div>
                                     </div>
-                                    <Button open>Read</Button>
+                                    <Button open><FiBookOpen/></Button>
                                   </div> 
                                   : children;
 
