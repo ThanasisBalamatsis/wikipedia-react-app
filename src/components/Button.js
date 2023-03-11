@@ -10,7 +10,7 @@ export default function Button({
     const classes = classnames("flex items-center px-3 py-1.5 border h-9 m-1 font-thin",{
         "border-sky-600 bg-sky-600 text-white rounded" : submit,
         "border-red-400 bg-red-500" : close,
-        "border-bg-stone-300 bg-stone-300 text-stone-600 text-sm rounded-lg h-8" : read
+        "border-bg-stone-300 bg-stone-300 text-stone-600 text-sm rounded-lg h-8 w-1/6 justify-center" : read
     });
 
     return (
